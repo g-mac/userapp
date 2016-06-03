@@ -3,5 +3,7 @@
 LOG:
 
 $ rails new userapp -d postgresql
-$ rake db:createrails
+$ rake db:create
 $ rails g controller users new
+$ rails g model user email:string password_hash:string password_salt:string
+$ rake db:migrate
