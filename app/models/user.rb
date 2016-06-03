@@ -1,5 +1,5 @@
 class User < ActiveRecord::Base
-  attr_accessor :password
+  attr_accessor :password #this is needed because the table doesnt hold a 'password', only 'password_hash' and 'password_salt'; so the when the form is mapped to the model the 'password' attribute is unkown
   before_save :encrypt_password
 
   # EMAIL_REGEX = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,4}$/i
