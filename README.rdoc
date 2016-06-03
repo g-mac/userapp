@@ -4,3 +4,4 @@ LOG:
 
 $ rails new userapp -d postgresql
 $ rake db:createrails
+$ rails g controller users new
