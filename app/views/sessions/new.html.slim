@@ -1,2 +1,26 @@
-h1 Sessions#new
-p Find me in app/views/sessions/new.html.slim
+.h1 Login
+.div
+  /= bootstrap_form_for(@user) do |f|
+  = form_tag sessions_path do
+    = label_tag :email
+    br
+    = email_field_tag :email, params[:email]
+    br
+    = label_tag :password
+    br
+    = password_field_tag :password
+    br
+    br
+    = submit_tag "login"
+      /= f.email_field :email, params[:email]
+      /= f.password_field :password
+      /= f.submit "login"
+
+/h1 Log in
+/.div
+/  = form_tag sessions_path do
+/      = label_tag :email
+/      = text_field_tag :email, params[:email]
+/      = label_tag :password
+/      = password_field_tag :password
+/      = submit_tag "Log in"
